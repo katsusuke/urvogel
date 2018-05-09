@@ -15,7 +15,15 @@ config :urvogel, UrvogelWeb.Endpoint,
   secret_key_base: "Y82MIDoEIlnyQlfDlb5Hqv25ovImF+qlBnjjjzI6K0m81nHEWRhJ/vddz1qwSfRF",
   render_errors: [view: UrvogelWeb.ErrorView, accepts: ~w(html json)],
   pubsub: [name: Urvogel.PubSub,
-           adapter: Phoenix.PubSub.PG2]
+           adapter: Phoenix.PubSub.PG2],
+  live_reload: [
+    patterns: [
+      ~r{priv/static/.*(js|css|png|jpeg|jpg|gif|svg)$},
+      ~r{priv/gettext/.*(po)$},
+      ~r{web/views/.*(ex)$},
+      ~r{web/templates/.*(eex|slim|slime)$} # here
+    ]
+  ]
 
 # Configures Elixir's Logger
 config :logger, :console,
