@@ -1,0 +1,28 @@
+<h2>Show User</h2>
+
+<ul>
+
+  <li>
+    <strong>Username:</strong>
+    <%= @user.username %>
+  </li>
+
+  <li>
+    <strong>Domain:</strong>
+    <%= @user.domain %>
+  </li>
+
+  <li>
+    <strong>Access token:</strong>
+    <%= @user.access_token %>
+  </li>
+
+  <li>
+    <strong>Access token secret:</strong>
+    <%= @user.access_token_secret %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: user_path(@conn, :edit, @user) %></span>
+<span><%= link "Back", to: user_path(@conn, :index) %></span>
