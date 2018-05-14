@@ -20,7 +20,7 @@ defmodule Urvogel.Mixfile do
   def application do
     [
       mod: {Urvogel.Application, []},
-      extra_applications: [:logger, :runtime_tools]
+      extra_applications: [:logger, :runtime_tools, :oauth2]
     ]
   end
 
@@ -41,7 +41,8 @@ defmodule Urvogel.Mixfile do
       {:phoenix_live_reload, "~> 1.0", only: :dev},
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
-      {:phoenix_slime, "~> 0.9.0"}
+      {:phoenix_slime, "~> 0.9.0"},
+      {:oauth2, "~> 0.9"}
     ]
   end
 
