@@ -1,0 +1,23 @@
+<h2>Show Instance</h2>
+
+<ul>
+
+  <li>
+    <strong>Host:</strong>
+    <%= @instance.host %>
+  </li>
+
+  <li>
+    <strong>Client:</strong>
+    <%= @instance.client_id %>
+  </li>
+
+  <li>
+    <strong>Client secret:</strong>
+    <%= @instance.client_secret %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: instance_path(@conn, :edit, @instance) %></span>
+<span><%= link "Back", to: instance_path(@conn, :index) %></span>

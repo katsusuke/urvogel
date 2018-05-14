@@ -1,0 +1,30 @@
+<h2>Listing Instances</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Host</th>
+      <th>Client</th>
+      <th>Client secret</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for instance <- @instances do %>
+    <tr>
+      <td><%= instance.host %></td>
+      <td><%= instance.client_id %></td>
+      <td><%= instance.client_secret %></td>
+
+      <td class="text-right">
+        <span><%= link "Show", to: instance_path(@conn, :show, instance), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Edit", to: instance_path(@conn, :edit, instance), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Delete", to: instance_path(@conn, :delete, instance), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Instance", to: instance_path(@conn, :new) %></span>

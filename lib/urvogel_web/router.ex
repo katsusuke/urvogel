@@ -18,6 +18,7 @@ defmodule UrvogelWeb.Router do
 
     get "/", PageController, :index
     resources "/users", UserController
+    resources "/accounts"
   end
 
   # Other scopes may use custom stacks.
