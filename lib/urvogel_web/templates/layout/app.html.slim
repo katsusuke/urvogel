@@ -7,17 +7,15 @@ html lang="en"
     meta content="width=device-width, initial-scale=1" name="viewport"
     meta content="" name="description"
     meta content="" name="author"
-    title Hello Urvogel!
-    = if Mix.env == :dev do
-      link href="http://localhost:8080/app.css" rel="stylesheet"
-    - else
-      link href="#{static_path(@conn, "/css/app.css")}" rel="stylesheet"
-
+    title Urvogel
   body
     .container
       p.alert.alert-info role="alert" = get_flash(@conn, :info)
       p.alert.alert-danger role="alert" = get_flash(@conn, :error)
       main role="main"
         = render @view_module, @view_template, assigns
-    = if Mix.env != :dev do
+    = if Mix.env == :dev do
+      script src="http://localhost:8080/app.js"
+    - else
       script src="#{static_path(@conn, "/js/app.js")}"
+      
