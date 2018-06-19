@@ -1,2 +1,32 @@
-p hello
-#app
+.container
+  .col-md-6.mx-auto.text-center
+    .header-title
+      h1.wv-heading--title
+        | Mastodon connect to Twitter
+
+      h2.wv-heading--subtitle
+  .row
+    .col-md-4.mx-auto
+      .myform.form
+        form action="" method="post" name="login" 
+          .form-group
+            input#name.form-control.my-input name="instance" placeholder="Mastodon instance" type="text"
+          .form-group
+            input#email.form-control.my-input name="account_name" placeholder="Account Name" type="text"
+          .form-group
+            input#phone.form-control.my-input min="0" name="password" placeholder="Password" type="password"
+          .text-center
+            button.btn.btn-primary.send-button.tx-tfm type="submit"  Create Your Free Account
+          .col-md-12
+            .login-or
+              hr.hr-or/
+              .text-center.span.span-or or
+          .form-group
+            a.btn.btn-block.g-button href="#" 
+              i.fa.fa-google
+              | Sign up with Mastodon
+          p.small.mt-3
+            | By signing up, you are indicating that you have read and agree to the
+            a.ps-hero__content__link href="#"  Terms of Use
+            | and
+
