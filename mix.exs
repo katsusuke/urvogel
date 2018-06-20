@@ -42,7 +42,8 @@ defmodule Urvogel.Mixfile do
       {:gettext, "~> 0.11"},
       {:cowboy, "~> 1.0"},
       {:phoenix_slime, "~> 0.9.0"},
-      {:oauth2, "~> 0.9"}
+      {:oauth2, "~> 0.9"},
+      {:hunter, "~> 0.4"}
     ]
   end
 
